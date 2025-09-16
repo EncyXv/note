@@ -1,0 +1,78 @@
+"""
+字符串切片：取左不取右[开始:结尾]
+[:] ->>获取整个字符串
+负号代表从后往前数
+"""
+
+name = "learning python"
+
+print(name[1:3])      #ea
+print(name[:])        #learning python
+print(name[-3:-1])    #ho
+print(name[-3:])      #hon
+
+#[开始:结尾:步长]取左不取右
+print(name[1:5:2])    #er
+print(name[-6:-1:1])  #pytho
+print(name[-6:-1:2])  #pto
+print(name[-6:-1:5])  #p
+print(name[::-1])     #nohtyp gninrael
+
+
+"""
+字符串索引 下标 ->>由0开始
+负数 从后往前 由-1开始
+"""
+
+s = "learning python"
+print(s[1])
+print(s[-2])
+
+
+
+"""
+字符串拼接
+"""
+a='learning'+'python'
+b='100'+'50'
+print(a)
+print(b)
+
+c=a+b
+print(c)
+d = ','.join((a,b))
+print(d)
+
+
+"""
+字符串格式化
+"""
+s1 = "大家好,我的名字是xex,今年19岁,性别男"
+s2 = "大家好,我的名字是{},今年{}岁,性别{}".format("xex","19","男")
+print(s2)
+s3 = "敏娜桑,我的名字是{},今年{}岁,性别{}"
+print(s3.format("xuanxia","19","男"))
+s4 = "敏娜桑,我的名字是{1},今年{2}岁,性别{0}"
+print(s4.format("xuanxia","19","男"))
+
+
+"""
+字符串常用方法1
+find:查找元素位置
+查找字符串片段在字符串中的下标位置,从前往后找,返回的是第一个被找到字符串片段的起始位置
+第一个参数:要查找的字符串片段
+第二个参数:要查找的起始点
+第三个参数:要找到终止位置-1
+如果查找的字符串存在多个,查找结果是第一个出现的字符串下标
+找不要到就返回-1
+
+count:统计字符串片段在字符串中出现的次数
+找不到返回0
+"""
+s ="python learning"
+print(s.find("n"))
+print(s.find("n",4,13))
+print(s.find("n",6,13))
+print(s.count("n"))
+print(s.count("m"))
+print(s.count("n",4,13))
