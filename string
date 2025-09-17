@@ -76,3 +76,84 @@ print(s.find("n",6,13))
 print(s.count("n"))
 print(s.count("m"))
 print(s.count("n",4,13))
+
+
+"""
+字符串常用方法2
+replace:替换指定的字符串片段
+参数1:要替换的字符串片段
+参数2替换之后的字符串片段
+参数3:替换的次数,从前往后替换(默认替换所有的)
+
+upper:将小写字母转为大写
+lower:将大写字母转为小写
+"""
+s="Python to Encyxv"
+res1=s.replace('o','TT')
+print(res1)
+res2=s.replace('o','TT',1)
+print(res2)
+s1=s.upper()
+print(s1)
+s2=s1.lower()
+print(s2)
+
+
+"""
+字符串常用方法3
+split:指定分割点对字符进行分割
+参数1:分割点
+参数2:分割的次数(默认找到所有的分割点进行分割)
+
+strip:去除字符串首尾的字符
+默认去除首尾空格
+"""
+s1="111ac222abbba333ad444"
+print(s1.split('a'))
+print(s1.split('a',2))
+s2="     python:ency     "
+print(s2.strip())
+s3="11111python:ency11111"
+print(s3.strip('1'))
+s4="     python:88888      ency99999"
+print(s4.replace(' ',''))
+
+
+"""
+传统格式化输出法
+%s:为字符占位,任意类型都可以
+%d:为数值类型占位
+%f:为浮点数类型占位
+
+F表达式(F/f都一样)
+
+"""
+s1='我%s你'%('爱')
+print(s1)
+s2='我的成绩%d'%(100)
+print(s2)
+s3='我的零花钱%f'%(345.45)
+print(s3)
+
+name='Ency'
+age=19
+s4='我的名字是{},我的年龄是{}'.format(name,age)
+print(s4)
+s5=F'我的名字是{name},我的年龄是{age}'
+print(s5)
+
+
+"""
+len():字符串的长度
+format:格式化输出
+1.格式化小数长度(四舍五入)   :.2f
+2.将小数按百分比的形式显示   :.2%
+"""
+s1='pythonn      nnnnnn'
+print(len(s1))
+s2=27.7374681
+s3=82.772711
+print("今天的泰式打抛饭{:.2f}块钱".format(s2,s3))
+print("今天的泰式打抛饭{0:.2f}块钱".format(s2,s3))
+print("今天的泰式打抛饭{1:.2f}块钱".format(s2,s3))
+print('百分比为{:.2%}'.format(0.223344))
